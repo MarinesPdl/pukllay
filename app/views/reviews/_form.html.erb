@@ -1,0 +1,5 @@
+<%= simple_form_for [@reservation, @review] do |f| %>
+  <%= f.input :content, placeholder: "Escribe tu reseña aquí" %>
+  <%= f.input :rating, placeholder: "Agrega un rating (1-5)" %>
+  <%= f.submit "Agregar reseña" %>
+<% end %>
