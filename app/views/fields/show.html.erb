@@ -1,14 +1,16 @@
 <br>
 <br>
 
-<h3><%= @field.name %></h3>
+
+<h3><%= @field.name %></h3> <%= link_to 'Editar', edit_field_path(@field.id) %>
+
 <ul>
   <li> <%= @field.address %> </li>
   <li> <%= @field.phone_number %> </li>
 </ul>
 
 <br>
-<%= link_to "Editar", edit_field_path %>
 
-<br>
 <%= link_to 'Inicio', root_path %>
+<%= link_to 'Index', fields_path %>
+

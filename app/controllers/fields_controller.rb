@@ -13,8 +13,9 @@ class FieldsController < ApplicationController
 
   def create
     @field = Field.new(field_params)
+    @field.user = current_user
     if @field.save
-      redirect_to fields_path
+      redirect_to field_path(@field)
     else
       render :new
     end
@@ -23,7 +24,7 @@ class FieldsController < ApplicationController
   def edit
     @field = Field.find(params[:id])
   end
-
+  
   def update
     @field = Field.find(params[:id])
     @field.update(field_params)
