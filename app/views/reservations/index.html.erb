@@ -1,10 +1,10 @@
-<%# <h1>Reservaciones</h1>
+<h1>Mis reservaciones</h1>
 <p> </p>
 
-<ul class="">
+<ul class="list_reservations">
      <% @reservations.each do |reservation| %>
           <li>
-            <%= link_to field.name, fields_id_reservations_show_path(reservation) %>
+            <%= link_to reservation.field.name, reservation_path(reservation) %>
           </li>
         <% end %>
 </ul>
