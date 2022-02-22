@@ -1,0 +1,12 @@
+<%# <h1>Reservaciones</h1>
+<p> </p>
+
+<ul class="">
+     <% @reservations.each do |reservation| %>
+          <li>
+            <%= link_to field.name, fields_id_reservations_show_path(reservation) %>
+          </li>
+        <% end %>
+</ul>
+
+<%= link_to "volver", fields_path, class: 'btn btn-primary' %> %>
