@@ -7,7 +7,7 @@ class ReservationsController < ApplicationController
 
   def show
     # @fields = Field.find(params[:field_id])
-    @reservations = Reservation.find(params[:id])
+    @reservation = Reservation.find(params[:id])
   end
 
   def new
@@ -26,6 +26,18 @@ class ReservationsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def update
+    @reservation = Reservation.find(params[:id])
+    @reservation.update(reservation_params)
+    redirect_to reservation_path(@reservation)
+  end
+
+  def destroy
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+    redirect_to reservations_path(@reservation)
   end
 
   private
