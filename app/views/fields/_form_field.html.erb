@@ -1,0 +1,7 @@
+<%= simple_form_for [@field] do |f| %>
+  <%= f.input :name, placeholder: "Nombre del establecimiento" %>
+  <%= f.input :address, placeholder: "Direccion" %>
+  <%= f.input :phone_number, placeholder: "Numero de telefono" %>
+  <%= f.input :availability, placeholder: "availability" %>
+  <%= f.submit "Agregar" %>
+<% end %>

@@ -1,0 +1,12 @@
+<br>
+<br>
+<h1> Campos de futbol </h1>
+
+<ul>
+  <% @fields.each do |field| %>
+    <li><%= link_to field.name, root_path)%><%= link_to "Editar", edit_field_path %>
+    </li>
+  <% end %>
+</ul>
+
+<br>
