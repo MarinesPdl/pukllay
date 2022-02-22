@@ -1,0 +1,10 @@
+<h1> Reseñas </h1>
+
+<%= @reservation.date_time %>
+
+<%= @reservation.reviews.each do |review| %>
+  <%= review.content %>
+<% end %>
+
+<%= link_to 'Index', fields_path %>
+<%= link_to 'Crear reseña', new_reservation_review_path(@reservation.id) %>

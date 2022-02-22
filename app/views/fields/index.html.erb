@@ -6,6 +6,7 @@
   <% @fields.each do |field| %>
     <li><%= link_to field.name, field_path(field) %>
     <%= link_to 'Editar', edit_field_path(field.id) %>
+    <%= link_to 'Reservar', new_field_reservation_path(field.id) %>
     </li>
   <% end %>
 </ul>
@@ -13,4 +14,3 @@
 <br>
 <%= link_to 'Inicio', root_path %>
 <%= link_to 'Crear', new_field_path %>
-
