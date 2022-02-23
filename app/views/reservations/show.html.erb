@@ -3,12 +3,11 @@
   <h1> Tu reserva </h1>
 
   <%= "Tu reserva es el #{@reservation.date_time}" %>
-
   <%= link_to "Editar", edit_reservation_path, class: 'btn btn-primary btn-sm'  %>
   <%= link_to 'Cancelar reserva', reservation_path(@reservation), class: 'btn btn-primary btn-sm' , method: :delete, data: {confirm: "Estas seguro de borrar?"} %>
 
   <br>
   <br>
   <%= link_to 'Crear reseña', new_reservation_review_path(@reservation.id), class: 'btn btn-primary btn-sm' %>
-  <%= link_to 'Buscar', fields_path, class: 'btn btn-primary btn-sm' %>
+  <%= link_to 'Volver a todas las canchas', fields_path, class: 'btn btn-primary btn-sm' %>
 </div>

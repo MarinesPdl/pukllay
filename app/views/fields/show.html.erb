@@ -8,7 +8,7 @@
             <li> <%= @field.address %> </li>
             <li> <%= @field.phone_number %> </li>
             </ul>
-            <h3>Reseñas</h3>
+            <h2>Reseñas</h2>
             <ul>
             <% @reservations.each do |reservation| %>
               <% reservation.reviews.each do |review| %>
@@ -22,6 +22,6 @@
   </div>
   <div class="botones-centrados">
         <%= link_to 'Editar', edit_field_path(@field.id), class: 'btn btn-primary' %>
-        <%= link_to 'Buscar', fields_path, class: 'btn btn-primary' %>
+        <%= link_to 'Volver', fields_path, id: "boton_azul", class: 'btn btn-primary' %>
     </div>
 </div>
