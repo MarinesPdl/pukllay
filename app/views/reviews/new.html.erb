@@ -1,5 +1,9 @@
-<h1>Escribe una reseña del local</h1>
-<%= render 'form', review: @review %>
+<div class="container">
+  <br>
+  <h1>Escribe una reseña del local</h1>
+  <%= render 'form', review: @review %>
 
-<br>
-<%= link_to 'Regresar a Mis Reservaciones', reservations_path %>
+  <br>
+  <%= link_to 'Mis Reservaciones', reservations_path, class: 'btn btn-primary btn-sm' %>
+  <%= link_to 'Buscar', fields_path, class: 'btn btn-primary btn-sm' %>
+</div>

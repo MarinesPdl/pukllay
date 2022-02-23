@@ -27,6 +27,10 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def edit
+    @reservation = Reservation.find(params[:id])
+  end
+
   def update
     @reservation = Reservation.find(params[:id])
     @reservation.update(reservation_params)
@@ -36,7 +40,7 @@ class ReservationsController < ApplicationController
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
-    redirect_to reservations_path(@reservation)
+    redirect_to reservations_path
   end
 
   private
@@ -45,7 +49,7 @@ class ReservationsController < ApplicationController
     params.require(:reservation).permit(:date_time)
   end
 
-  # def set_field
+  #def set_field
   #   @field = Field.find(params[:field_id])
   # end
 end
