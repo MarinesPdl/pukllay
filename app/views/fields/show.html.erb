@@ -1,23 +1,27 @@
-<br>
-<br>
-
-<h3><%= @field.name %></h3> <%= link_to 'Editar', edit_field_path(@field.id) %>
-
-<ul>
-  <li> <%= @field.address %> </li>
-  <li> <%= @field.phone_number %> </li>
-</ul>
-
-<br>
-
-<h3>Reseñas</h3>
-<% @reservations.each do |reservation| %>
-  <% reservation.reviews.each do |review| %>
-    <%= review.content %>
-  <% end %>
-<% end %>
-
-<br>
-
-<%= link_to 'Inicio', root_path %>
-<%= link_to 'Index', fields_path %>
+<div class= "container">
+  <div class="card-trip">
+      <img src="https://cdn.pixabay.com/photo/2020/01/12/16/57/stadium-4760441_960_720.jpg" />
+      <div class="card-trip-infos">
+          <div>
+            <h2><%= @field.name %></h2>
+            <ul>
+            <li> <%= @field.address %> </li>
+            <li> <%= @field.phone_number %> </li>
+            </ul>
+            <h3>Reseñas</h3>
+            <ul>
+            <% @reservations.each do |reservation| %>
+              <% reservation.reviews.each do |review| %>
+                <li> <%= review.content %> </li>
+              <% end %>
+            <% end %>
+            </ul>
+          </div>
+        <h2 class="card-trip-pricing">$1500</h2>
+      </div>
+  </div>
+  <div class="botones-centrados">
+        <%= link_to 'Editar', edit_field_path(@field.id), class: 'btn btn-primary' %>
+        <%= link_to 'Buscar', fields_path, class: 'btn btn-primary' %>
+    </div>
+</div>
