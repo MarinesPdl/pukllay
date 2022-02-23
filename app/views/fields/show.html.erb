@@ -1,7 +1,6 @@
 <br>
 <br>
 
-
 <h3><%= @field.name %></h3> <%= link_to 'Editar', edit_field_path(@field.id) %>
 
 <ul>
@@ -11,6 +10,14 @@
 
 <br>
 
+<h3>Reseñas</h3>
+<% @reservations.each do |reservation| %>
+  <% reservation.reviews.each do |review| %>
+    <%= review.content %>
+  <% end %>
+<% end %>
+
+<br>
+
 <%= link_to 'Inicio', root_path %>
 <%= link_to 'Index', fields_path %>
-

@@ -30,13 +30,13 @@ class ReservationsController < ApplicationController
   def update
     @reservation = Reservation.find(params[:id])
     @reservation.update(reservation_params)
-    # redirect_to reservation_path(@reservation)
+    redirect_to reservations_path(@reservation)
   end
 
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
-    # redirect_to reservations_path(@reservation)
+    redirect_to reservations_path(@reservation)
   end
 
   private

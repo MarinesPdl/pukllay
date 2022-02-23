@@ -4,7 +4,8 @@
 <ul class="list_reservations">
      <% @reservations.each do |reservation| %>
           <li>
-            <%= link_to reservation.field.name, reservation_path(reservation) %>
+            <%= link_to reservation.field.name, field_path(reservation.field.id) %>
+            <%= link_to "Tienes una reserva para #{reservation.date_time}", reservation_path(reservation)  %>
           </li>
         <% end %>
 </ul>
