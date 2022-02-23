@@ -5,6 +5,7 @@ class FieldsController < ApplicationController
 
   def show
     @field = Field.find(params[:id])
+    @reservations = @field.reservations
   end
 
   def new
@@ -24,7 +25,7 @@ class FieldsController < ApplicationController
   def edit
     @field = Field.find(params[:id])
   end
-  
+
   def update
     @field = Field.find(params[:id])
     @field.update(field_params)
