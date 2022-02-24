@@ -41,6 +41,6 @@ class FieldsController < ApplicationController
   private
 
   def field_params
-    params.require(:field).permit(:name, :address, :phone_number, :availability)
+    params.require(:field).permit(:name, :address, :description, :phone_number, :availability, photos: [])
   end
 end

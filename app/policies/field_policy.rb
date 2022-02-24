@@ -1,9 +1,9 @@
 class FieldPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
-     def resolve
-       scope.all
-     end
+    def resolve
+      scope.all
+    end
   end
 
   def create?
@@ -11,7 +11,7 @@ class FieldPolicy < ApplicationPolicy
   end
 
   def update?
-    @user.role == "owner"
+    record.user == user
   end
 
 end

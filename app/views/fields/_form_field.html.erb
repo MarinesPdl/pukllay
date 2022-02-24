@@ -1,7 +1,9 @@
 <%= simple_form_for [@field] do |f| %>
   <%= f.input :name, placeholder: "Nombre del establecimiento" %>
-  <%= f.input :address, placeholder: "Direccion" %>
-  <%= f.input :phone_number, placeholder: "Numero de telefono" %>
-  <%= f.input :availability, placeholder: "availability" %>
+  <%= f.input :address, placeholder: "Dirección" %>
+  <%= f.input :description, as: :text, placeholder: "Descripción" %>
+  <%= f.input :phone_number, placeholder: "Número de teléfono" %>
+  <%= f.input :availability, placeholder: "Disponibilidad" %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit "Guardar" %>
 <% end %>
