@@ -21,7 +21,9 @@
       </div>
   </div>
   <div class="botones-centrados">
+   <% if policy(Field).create? %>
         <%= link_to 'Editar', edit_field_path(@field.id), class: 'btn btn-primary' %>
+    <% end  %>
         <%= link_to 'Volver', fields_path, id: "boton_azul", class: 'btn btn-primary' %>
     </div>
 </div>
