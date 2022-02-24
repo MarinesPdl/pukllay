@@ -7,16 +7,11 @@ class FieldPolicy < ApplicationPolicy
   end
 
   def create?
-    user.role == "owner"
-  end
-  def edit?
-    update?
-    user.role == "owner"
+    @user.role == "owner"
   end
 
   def update?
-    true
+    @user.role == "owner"
   end
-
 
 end
