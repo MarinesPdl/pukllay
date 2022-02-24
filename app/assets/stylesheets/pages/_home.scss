@@ -1,1 +1,28 @@
 // Specific CSS for your home-page
+body{
+ font-family: $body-font;
+}
+h1{
+  font-family: $body-font;
+}
+
+
+.container-card{
+  margin: 50px;
+  display: flex;
+  justify-content: space-around;
+  .card-1{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #2F2F2F;;
+    padding: 40px;
+    background-color:#0000009c;
+    box-shadow: 0px 6px 15px rgba(177, 177, 177, 0.308);
+    .card-2{
+      color: rgb(255, 255, 255) ;
+       .title{
+         margin-left: 70px;
+       }
+    }
+  }
+}
