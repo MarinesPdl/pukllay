@@ -5,7 +5,7 @@
         <div class="card-product">
         <div class="card-product-infos">
           <h2><%= link_to reservation.field.name, field_path(reservation.field.id) %></h2>
-          <p><%= link_to "Tienes una reserva para #{reservation.date_time}", reservation_path(reservation)  %></p>
+          <p><%= link_to "Tienes una reserva el #{localize reservation.date_time, format: "%d de %B %Y a las %H h"}", reservation_path(reservation)  %></p>
         </div>
       </div>
     <% end %>
