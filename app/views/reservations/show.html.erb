@@ -2,8 +2,9 @@
   <br>
   <h1> Tu reserva </h1>
 
-  <%= "Tu reserva es el #{@reservation.date_time}" %>
-  <%= link_to "Editar", edit_reservation_path, class: 'btn btn-primary btn-sm'  %>
+  <%= "Tu reserva es el #{localize @reservation.date_time, format: "%d de %B %Y a las %H h"}" %>
+  <%= link_to "Editar", edit_reservation_path, class: 'btn btn-primary btn-sm' %>
+
   <%= link_to 'Cancelar reserva', reservation_path(@reservation), class: 'btn btn-primary btn-sm' , method: :delete, data: {confirm: "Estas seguro de borrar?"} %>
 
   <br>
