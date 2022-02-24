@@ -1,4 +1,5 @@
 class FieldsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
   def index
     @fields = policy_scope(Field)
   end
