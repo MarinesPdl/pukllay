@@ -9,7 +9,7 @@
           <h2><%= link_to field.name, field_path(field) %></h2>
             <p><%= field.description %></p>
           <br>
-          <%= link_to 'Reservar', new_field_reservation_path(field.id), class: 'btn btn-primary btn-sm' %>
+          <%= link_to 'Reservar', new_field_reservation_path(field.id), class: 'btn btn-default' %>
         </div>
     </div>
   <% end %>
