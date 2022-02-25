@@ -1,4 +1,6 @@
-<%= simple_form_for [@field, @reservation] do |f| %>
-  <%= f.input :date_time, placeholder: "Fecha" %>
-  <%= f.submit "Guardar" %>
-<% end %>
+<div class="form col-4">
+  <%= simple_form_for [@field, @reservation] do |f| %>
+    <%= f.input :date_time, placeholder: "Fecha" %>
+    <%= f.submit "Guardar", class: 'btn btn-default' %>
+  <% end %>
+</div>
