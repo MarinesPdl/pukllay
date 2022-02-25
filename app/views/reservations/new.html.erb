@@ -1,8 +1,11 @@
 <div class="container">
-  <h2>Agrega una reservación</h2>
+  <div class="titulo col-4 row justify-content-center" style="margin: 0 auto">
+    <h2>Agrega una reservación</h2>
+  </div>
+  <div class="justify-content-center" style="margin: 0 auto">
   <%= render 'form_reservations', field: @field, reservation: @reservation %>
-
   <br>
-  <%= link_to 'Mis Reservaciones', reservations_path, class: 'btn btn-primary' %>
-  <%= link_to 'Volver a todas las canchas', fields_path, class: 'btn btn-primary' %>
+  <%= link_to 'Mis Reservaciones', reservations_path, class: 'btn btn-default' %>
+  <%= link_to 'Volver a todas las canchas', fields_path, class: 'btn btn-default' %>
+  </div>
 </div>

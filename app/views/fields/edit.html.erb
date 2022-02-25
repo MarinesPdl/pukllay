@@ -1,11 +1,9 @@
 <div class="container">
-  <br>
-  <br>
-
-  <h2>Editar <%= @field.name %></h2>
+  <div class="titulo col-4 row justify-content-center" style="margin: 0 auto">
+    <h2>Editar: <%= @field.name %></h2>
+  </div>
 
   <%= render 'form_field', field: @field %>
-
   <br>
   <%#= link_to 'Buscar', fields_path, class: 'btn btn-primary' %>
 </div>
