@@ -1,13 +1,18 @@
-<br>
 <div class="container">
-  <h2>Mis reservaciones</h2>
-    <% @reservations.each do |reservation| %>
-        <div class="card-product">
-        <div class="card-product-infos">
-          <h2><%= link_to reservation.field.name, field_path(reservation.field.id) %></h2>
-          <p><%= link_to "Tienes una reserva el #{localize reservation.date_time, format: "%d de %B %Y a las %H h"}", reservation_path(reservation)  %></p>
+  <div class="row">
+    <div class="col-sm-6">
+      <% @reservations.each do |reservation| %>
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title"><%="#{reservation.field.name}"%></h5>
+          <p class="card-text"><%="#{reservation.field.description}"%></p>
+          <%= link_to "Ver detalles de mi reserva", reservation_path(reservation), class: 'btn btn-dark'  %>
         </div>
       </div>
-    <% end %>
-  <%= link_to "Buscar", fields_path, class: 'btn btn-default' %>
+
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <%= link_to "Volver a todas las canchas", fields_path, class: 'btn btn-default' %>
 </div>

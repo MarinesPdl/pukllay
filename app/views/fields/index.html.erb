@@ -1,16 +1,21 @@
-<div class = "container" >
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn.pixabay.com/photo/2017/08/10/01/38/grass-2616911_960_720.jpg)">
-  Canchas de Fútbol
+<div class="container">
+  <div class="card-category"
+    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn.pixabay.com/photo/2017/08/10/01/38/grass-2616911_960_720.jpg)">
+    Canchas de Fútbol
   </div>
-  <% @fields.each do |field| %>
+
+
+  <div class="grid">
+    <% @fields.each do |field| %>
     <div class="card-product">
       <img src="https://cdn.pixabay.com/photo/2020/01/12/16/57/stadium-4760441_960_720.jpg" />
-        <div class="card-product-infos">
-          <h2><%= link_to field.name, field_path(field) %></h2>
-            <p><%= field.description %></p>
-          <br>
-          <%= link_to 'Reservar', new_field_reservation_path(field.id), class: 'btn btn-default' %>
-        </div>
+      <div class="card-infos">
+        <h2><%= link_to field.name, field_path(field) %></h2>
+        <p><%= field.description %></p>
+        <br>
+        <%= link_to 'Reservar', new_field_reservation_path(field.id), class: 'btn btn-default' %>
+      </div>
     </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

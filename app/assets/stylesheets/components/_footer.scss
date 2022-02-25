@@ -1,7 +1,36 @@
-footer{
-  width: 100%;
+// .footer{
+//   width: 100%;
+//   color: white;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: $gray-claro;
+//   position: sticky;
+//   // padding: 5px;
+//   //  .p-home{
+
+//   //  }
+//    h4{
+//      font-size: 20px;
+//    }
+// }
+.footer {
+  margin-top: 20px;
+  background-color: #0000009c;
   color: white;
-  // display: flex;
-  // align-items: center;
-  background-color: $gray-claro;
+  text-align: center;
+  padding: 15px;
+
+   a {
+    padding: 5px;
+    font-size: 30px;
+    color: $green-apple;
+  }
+  a i {
+    color: $green-apple;
+
+    &:hover {
+      color: white;
+    }
+  }
 }
