@@ -1,14 +1,15 @@
 .grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  // grid-gap: 10px;
+  grid-gap: 5px;
 }
-  .card-product{
+.card-product{
+    border-radius: 5px;
     overflow: hidden;
-    height: 120px;
-    // width: 400px;
+    height: 150px;
+    width: 350px;
     background-color: white;
-    box-shadow: 0 0 15px rgba(85, 85, 85, 0.452);
+    box-shadow: 0 0 15px rgba(49, 49, 49, 0.452);
     display: flex;
     align-items: center;
     // margin-bottom: 15px;
@@ -30,10 +31,10 @@
       margin-bottom: 0;
       margin-top: 8px;
     }
-    .card-product-infos{
-      padding: 16px;
+    .card-infos{
+      padding-left: 20px;
     }
-}
+ }
 
 #card-reserva {
   box-shadow: 0 0 15px rgba(49, 49, 49, 0.452);

@@ -1,5 +1,6 @@
 <div class= "container">
   <div class="card-trip">
+  <img src= "https://cdn.pixabay.com/photo/2020/01/12/16/57/stadium-4760441_960_720.jpg"/>
       <div class="card-trip-infos">
           <div>
             <h2><%= @field.name %></h2>
@@ -7,9 +8,11 @@
             <li> <%= @field.address %> </li>
             <li> <%= @field.phone_number %> </li>
             </ul>
-            <% @field.photos.each do |photo| %>
-              <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-            <% end %>
+            <div class= "card-img">
+              <% @field.photos.each do |photo| %>
+                <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+              <% end %>
+            </div>
             <br>
             <br>
             <h2>Reseñas</h2>
@@ -28,11 +31,11 @@
   <div class="botones-centrados">
     <% if user_signed_in? %>
       <% if policy(@field).update? %>
-        <%= link_to 'Editar', edit_field_path(@field.id), class: 'btn btn-primary' %>
+        <%= link_to 'Editar', edit_field_path(@field.id), class: 'btn btn-default' %>
         <% else %>
-        <%= link_to 'Reservar', new_field_reservation_path(@field.id), class: 'btn btn-primary' %>
+        <%= link_to 'Reservar', new_field_reservation_path(@field.id), class: 'btn btn-default' %>
       <% end  %>
     <%end%>
-    <%= link_to 'Volver', fields_path, id: "boton_azul", class: 'btn btn-primary' %>
+    <%= link_to 'Volver', fields_path, id: "boton_azul", class: 'btn btn-default' %>
   </div>
 </div>
