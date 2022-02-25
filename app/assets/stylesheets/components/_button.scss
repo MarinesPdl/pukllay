@@ -59,9 +59,15 @@
 .btn-default{
   background-color:#a7d129ea;
   border-color:  #a7d129;
+  margin-right: 5px;
   color: rgb(10, 7, 48);
     &:hover {
       background-color:#5b5656a9;
       color: white;
     }
+}
+
+#btn-reserva {
+  display: flex;
+  justify-content: center;
 }

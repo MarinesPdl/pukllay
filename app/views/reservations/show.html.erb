@@ -1,18 +1,17 @@
 <div class="container">
+  <div class="card mt-5" id="card-reserva">
+    <h5 class="card-header">Reservación</h5>
+    <div class="card-body">
+      <h5 class="card-title"><%="Cancha - #{@reservation.field.name}"%></h5>
+      <p class="card-text"><%= "Dirección: #{@reservation.field.address}" %></p>
+      <p class="card-text"><%= "Fecha: #{localize @reservation.date_time, format: "%d de %B %Y a las %H h"}" %></p>
+      <%= link_to "Editar", edit_reservation_path, id:"edit-show", class: 'btn btn-default' %>
+      <%= link_to 'Cancelar reserva', reservation_path(@reservation), id:"cancel-show", class: 'btn btn-default' , method: :delete, data: {confirm: "Estas seguro de borrar?"} %>
+    </div>
+  </div>
   <br>
-  <h2> Tu reserva </h2>
-
-  <%= "Tu reserva en el #{@reservation.field.name} está programada para el #{localize @reservation.date_time, format: "%d de %B %Y a las %H h"}" %>
-  <br>
-  <%= "Dirección: #{@reservation.field.address}" %>
-
-  <br>
-  <br>
-
-  <%= link_to "Editar", edit_reservation_path, id:"edit-show", class: 'btn btn-primary btn-sm' %>
-  <%= link_to 'Cancelar reserva', reservation_path(@reservation), id:"cancel-show", class: 'btn btn-primary btn-sm' , method: :delete, data: {confirm: "Estas seguro de borrar?"} %>
-  <br>
-  <br>
-  <%= link_to 'Crear reseña', new_reservation_review_path(@reservation.id), class: 'btn btn-primary btn-sm' %>
-  <%= link_to 'Volver a mis reservaciones', reservations_path, class: 'btn btn-primary btn-sm' %>
+  <div id= 'btn-reserva'>
+    <%= link_to 'Crear reseña', new_reservation_review_path(@reservation.id), class: 'btn btn-default' %>
+    <%= link_to 'Volver a mis reservaciones', reservations_path, class: 'btn btn-default'%>
+  </div>
 </div>
