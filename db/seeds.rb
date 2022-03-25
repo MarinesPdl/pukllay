@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+puts "Destruyendo seeds"
+Field.destroy_all
+
+puts "Creando seeds"
+10.times do
+  Field.create(name: Faker::WorldCup.stadium, address: "TBD", phone_number: Faker::PhoneNumber.phone_number)
+end
+
+puts "Seeds creadas!"
